@@ -13,6 +13,12 @@ include("nav.php");
 </script>
 
 <?php
+if(empty($_GET["getDelete"])){
+    
+} else{
+    include("confirm_delete.php");
+}
+
 if(empty($_GET["getUpdate"])){
 ?>
 

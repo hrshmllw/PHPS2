@@ -73,12 +73,6 @@ if(isset($_POST["btn_update"])){
 }
 ?>
 
-<style>
-    .error{
-        color:red;
-    }
-</style>
-
 <center>
 <br>
 <br>

@@ -4,14 +4,17 @@
 <br>
 
 <center>
-    <table border = "1" width = "80%">
+    <table border = "0" width = "80%">
         <tr>
             <td width = "16%"><b>Name</b></td>
-            <td width = "16%"><b>Gender</b></td>
+            <td width = "10%"><b>Gender</b></td>
             <td width = "16%"><b>Contact</b></td>
             <td width = "16%"><b>Email</b></td>
             <td width = "16%"><b>Password</b></td>
             <td width = "16%"><center><b>Action</b></center></td>
+        </tr>
+        <tr>
+            <td colspan="6"><hr></td>
         </tr>
 
 <?php
@@ -36,6 +39,7 @@ while($row_users = mysqli_fetch_assoc($retrieve_query)){
     $jScript = md5(rand(1,9));
     $newScript = md5(rand(1,9));
     $getUpdate = md5(rand(1,9));
+    $getDelete = md5(rand(1,9));
 
     echo "
     <tr>
@@ -48,11 +52,19 @@ while($row_users = mysqli_fetch_assoc($retrieve_query)){
             <center>
                 <br>
                     <a href='?jScript=$jScript&&newScript=$newScript&&getUpdate=$getUpdate&&id_user=$id_user' class = 'btn-update'>Update</a>
+                    &nbsp;
+                    <a href='?jScript=$jScript&&newScript=$newScript&&getDelete=$getDelete&&id_user=$id_user' class = 'btn-delete'>Delete</a>
                 <br>
                 <br>
             </center>
         </td>
     </tr>";
+
+    echo "
+    <tr>
+        <td colspan='6'><hr></td>
+    </tr>
+    ";
 }
 ?>
 
