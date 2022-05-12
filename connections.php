@@ -22,4 +22,18 @@ if (mysqli_connect_errno()){
     background: #a9a9a9;
     text-decoration: none;
 }
+
+.btn-update{
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    background: #a9a9a9;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn-update:hover{
+    background: #808080;
+    text-decoration: none;
+}
 </style>
