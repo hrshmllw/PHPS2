@@ -1,4 +1,6 @@
 <?php
+include("nav.php");
+
 $first_name = $middle_name = $last_name = $gender = $prefix = $seven_digits = $email = "";
 $first_nameErr = $middle_nameErr = $last_nameErr = $genderErr = $prefixErr = $seven_digitsErr = $emailErr = "";
 
