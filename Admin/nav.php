@@ -9,4 +9,7 @@
     &nbsp;
     &nbsp;
     <a href = "setting" class = "btn-primary">Setting</a>
+    &nbsp;
+    &nbsp;
+    <a href = "../logout" class = "btn-delete">Logout</a>
 </center>

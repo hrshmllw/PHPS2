@@ -14,7 +14,7 @@ if (mysqli_connect_errno()){
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0px;
-    font-family: Monserrat;
+    font-family: 'Montserrat';
     color: #ffffff;
     font-size: 16px;
     background: #808080;
@@ -28,11 +28,11 @@ if (mysqli_connect_errno()){
 }
 
 .btn-update{
-    font-family: Arial;
+    font-family: 'Montserrat';
     color: #ffffff;
     font-size: 15px;
     background: #a9a9a9;
-    padding: 10px 20px 10px 20px;
+    padding: 6px 20px 8px 20px;
     text-decoration: none;
 }
 
@@ -42,11 +42,11 @@ if (mysqli_connect_errno()){
 }
 
 .btn-delete{
-    font-family: Arial;
+    font-family: 'Montserrat';
     color: #ffffff;
     font-size: 15px;
     background: #d93434;
-    padding: 10px 20px 10px 20px;
+    padding: 6px 20px 8px 20px;
     text-decoration: none;
 }
 

@@ -1,5 +1,16 @@
 <?php
+session_start();
 include("nav.php");
+if(isset($_SESSION["email"])){
+    $email = $_SESSION["email"];
+    $query_account_type = mysqli_query($connections, "SELECT * FROM table_user WHERE email = '$email'");
+    $get_account_type = mysqli_fetch_assoc($query_account_type);
+    if($account_type == 1){
+        echo "<script>window.location.href='Admin';</script>";
+    } else{
+        echo "<script>window.location.href='Users';</script>";
+    }
+}
 
 date_default_timezone_set("Asia/Manila");
 $date_now = date("m/d/Y");
@@ -39,6 +50,7 @@ if(isset($_POST["btn_login"])){
             
             if($account_type == "1"){
                 if($db_password == $password){
+                    $_SESSION["email"] = $email;
                     echo "<script>window.location.href='Admin';</script>";
                 } else{
                     $passwordErr = "Incorrect password. You are attempting to log into an admin account.";
@@ -46,6 +58,7 @@ if(isset($_POST["btn_login"])){
             } else{
                 if($db_log_time <= $new_time){
                     if($db_password == $password){
+                        $_SESSION["email"] = $email;
                         mysqli_query($connections, "UPDATE table_user SET attempt = '', log_time = '' WHERE email = '$email'");
                         echo "<script>window.location.href='Users';</script>";
                     } else{

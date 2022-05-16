@@ -1,4 +1,15 @@
 <?php
+include("../connections.php");
+if(isset($_SESSION["email"])){
+    $email = $_SESSION["email"];
+    $authentication = mysqli_query($connections, "SELECT * FROM table_user WHERE email = '$email'");
+    $fetch = mysqli_fetch_assoc($authentication);
+    $account_type = $fetch["account_type"];
+
+    if($account_type != 1){
+        echo "<script>window.location.href='../forbidden';</script>";
+    }
+}
 $id_user = $_GET["id_user"];
 
 $get_record = mysqli_query($connections, "SELECT * FROM table_user WHERE id_user = '$id_user'");

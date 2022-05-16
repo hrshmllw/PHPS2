@@ -78,8 +78,8 @@ if (isset($_POST["button_register"])){
         }
         $password = random_password(8);
         include("connections.php");
-        mysqli_query($connections, "INSERT INTO table_user(first_name, middle_name, last_name, gender, prefix, seven_digits, email, password)
-        VALUES('$first_name', '$middle_name', '$last_name', '$gender', '$prefix', '$seven_digits', '$email', '$password')  ");
+        mysqli_query($connections, "INSERT INTO table_user(first_name, middle_name, last_name, gender, prefix, seven_digits, email, password, account_type)
+        VALUES('$first_name', '$middle_name', '$last_name', '$gender', '$prefix', '$seven_digits', '$email', '$password', '2')");
 
         echo "<script>window.location.href='success.php';</script>";
     }

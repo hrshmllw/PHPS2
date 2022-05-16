@@ -20,7 +20,7 @@
 <?php
 include("../connections.php");
 
-$retrieve_query = mysqli_query($connections, "SELECT * FROM table_user");
+$retrieve_query = mysqli_query($connections, "SELECT * FROM table_user WHERE account_type = '2'");
 
 while($row_users = mysqli_fetch_assoc($retrieve_query)){
     $id_user = $row_users["id_user"];
