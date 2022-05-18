@@ -4,14 +4,14 @@
 <br>
 
 <center>
-    <table border = "0" width = "80%">
+    <table border="0" width="80%">
         <tr>
-            <td width = "16%"><b>Name</b></td>
-            <td width = "10%"><b>Gender</b></td>
-            <td width = "16%"><b>Contact</b></td>
-            <td width = "16%"><b>Email</b></td>
-            <td width = "16%"><b>Password</b></td>
-            <td width = "16%"><center><b>Action</b></center></td>
+            <td width="16%"><b>Name</b></td>
+            <td width="10%"><b>Gender</b></td>
+            <td width="16%"><b>Contact</b></td>
+            <td width="16%"><b>Email</b></td>
+            <td width="16%"><b>Password</b></td>
+            <td width="16%"><center><b>Action</b></center></td>
         </tr>
         <tr>
             <td colspan="6"><hr></td>

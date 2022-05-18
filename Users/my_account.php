@@ -10,3 +10,8 @@ if(isset($_SESSION["email"])){
 include("../connections.php");
 include("nav.php");
 ?>
+
+<script src="../Admin/js/jQuery.js"></script>
+<br>
+<br>
+<form method="POST" enctype=""

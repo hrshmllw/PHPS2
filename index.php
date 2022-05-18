@@ -93,7 +93,7 @@ if (isset($_POST["button_register"])){
     }
 </style>
 
-<script type = "application/javascript">
+<script type="application/javascript">
 function isNumberKey(evt){
     var charCode = (evt.which) ? evt.which : event.keyCode
     if (charCode > 31 && (charCode < 48 || charCode > 57)){
@@ -103,62 +103,62 @@ function isNumberKey(evt){
 }
 </script>
 
-<form method = "POST">
+<form method="POST">
     <center>
-        <table border = "0" width = "50%">
+        <table border="0" width="50%">
             <tr>
                 <td>
-                    <input type = "text" name = "first_name" placeholder = "First name" value = "<?php echo $first_name; ?>">
-                    <span class = "error"><?php echo $first_nameErr; ?></span>
+                    <input type="text" name="first_name" placeholder="First name" value="<?php echo $first_name; ?>">
+                    <span class="error"><?php echo $first_nameErr; ?></span>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type = "text" name = "middle_name" placeholder = "Middle name" value = "<?php echo $middle_name; ?>">
-                    <span class = "error"><?php echo $middle_nameErr; ?></span>
+                    <input type="text" name="middle_name" placeholder="Middle name" value="<?php echo $middle_name; ?>">
+                    <span class="error"><?php echo $middle_nameErr; ?></span>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type = "text" name = "last_name" placeholder = "Last name" value = "<?php echo $last_name; ?>">
-                    <span class = "error"><?php echo $last_nameErr; ?></span>
+                    <input type="text" name="last_name" placeholder="Last name" value="<?php echo $last_name; ?>">
+                    <span class="error"><?php echo $last_nameErr; ?></span>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <select name = "gender">
-                        <option name = "gender" value = "">Select gender</option>
-                        <option name = "gender" value = "Male" <?php if ($gender == "Male") { echo "selected"; } ?>>Male</option>
-                        <option name = "gender" value = "Female" <?php if ($gender == "Female") { echo "selected"; } ?>>Female</option>
+                    <select name="gender">
+                        <option name="gender" value="">Select gender</option>
+                        <option name="gender" value="Male" <?php if ($gender == "Male") { echo "selected"; } ?>>Male</option>
+                        <option name="gender" value="Female" <?php if ($gender == "Female") { echo "selected"; } ?>>Female</option>
                     </select>
-                    <span class = "error"><?php echo $genderErr; ?></span>
+                    <span class="error"><?php echo $genderErr; ?></span>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <select name = "prefix">
-                        <option name = "prefix" id = "prefix" value = "">Network Provider</option>
-                        <option name = "prefix" id = "prefix" value = "0916" <?php if ($prefix == "0916") { echo "selected"; } ?>>0916</option>
-                        <option name = "prefix" id = "prefix" value = "0917" <?php if ($prefix == "0917") { echo "selected"; } ?>>0917</option>
-                        <option name = "prefix" id = "prefix" value = "0926" <?php if ($prefix == "0926") { echo "selected"; } ?>>0926</option>
-                        <option name = "prefix" id = "prefix" value = "0927" <?php if ($prefix == "0927") { echo "selected"; } ?>>0927</option>
-                        <option name = "prefix" id = "prefix" value = "0929" <?php if ($prefix == "0929") { echo "selected"; } ?>>0929</option>
-                        <option name = "prefix" id = "prefix" value = "0949" <?php if ($prefix == "0949") { echo "selected"; } ?>>0949</option>
+                    <select name="prefix">
+                        <option name="prefix" id="prefix" value="">Network Provider</option>
+                        <option name="prefix" id="prefix" value="0916" <?php if ($prefix == "0916") { echo "selected"; } ?>>0916</option>
+                        <option name="prefix" id="prefix" value="0917" <?php if ($prefix == "0917") { echo "selected"; } ?>>0917</option>
+                        <option name="prefix" id="prefix" value="0926" <?php if ($prefix == "0926") { echo "selected"; } ?>>0926</option>
+                        <option name="prefix" id="prefix" value="0927" <?php if ($prefix == "0927") { echo "selected"; } ?>>0927</option>
+                        <option name="prefix" id="prefix" value="0929" <?php if ($prefix == "0929") { echo "selected"; } ?>>0929</option>
+                        <option name="prefix" id="prefix" value="0949" <?php if ($prefix == "0949") { echo "selected"; } ?>>0949</option>
                     </select>
-                    <span class = "error"><?php echo $prefixErr; ?></span>
-                    <input type = "text" name = "seven_digits" value = "<?php echo $seven_digits; ?>" maxlength = "7" placeholder = "Other seven digits" onkeypress = 'return isNumberKey(event)'>
-                    <span class = "error"><?php echo $seven_digitsErr; ?></span>
+                    <span class="error"><?php echo $prefixErr; ?></span>
+                    <input type="text" name="seven_digits" value="<?php echo $seven_digits; ?>" maxlength="7" placeholder="Other seven digits" onkeypress = 'return isNumberKey(event)'>
+                    <span class="error"><?php echo $seven_digitsErr; ?></span>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type = "text" name = "email" value = "<?php echo $email; ?>" placeholder = "Email">
-                    <span class = "error"><?php echo $emailErr; ?></span>
+                    <input type="text" name="email" value="<?php echo $email; ?>" placeholder="Email">
+                    <span class="error"><?php echo $emailErr; ?></span>
                 </td>
             </tr>
 
@@ -170,7 +170,7 @@ function isNumberKey(evt){
 
             <tr>
                 <td>
-                    <input type = "submit" name = "button_register" value = "Register">
+                    <input type="submit" name="button_register" value="Register">
                 </td>
             </tr>
         </table>

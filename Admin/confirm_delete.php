@@ -28,8 +28,8 @@ if(isset($_POST["btn_delete"])){
 <br>
 <br>
 <center>
-    <form method = "POST">
-        <h4>You are about to delete this record: <font color = "red"><?php echo $full_name; ?></font></h4>
-        <input type = "submit" name = "btn_delete" value = "Confirm" class = "btn-update">&nbsp;&nbsp;<a href = "?" class = "btn-delete">Cancel</a>
+    <form method="POST">
+        <h4>You are about to delete this record: <font color="red"><?php echo $full_name; ?></font></h4>
+        <input type="submit" name="btn_delete" value="Confirm" class="btn-update">&nbsp;&nbsp;<a href="?" class="btn-delete">Cancel</a>
     </form> 
 </center>

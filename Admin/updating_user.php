@@ -88,60 +88,60 @@ if(isset($_POST["btn_update"])){
 <br>
 <br>
 <br>
-<form method = "POST">
-    <table border = "0" width = "50%">
+<form method="POST">
+    <table border="0" width="50%">
         <tr>
             <td>
-                <input type = "text" name = "new_first_name" value = "<?php echo $db_first_name; ?>" placeholder = "First name">
-                <span class = "error"><?php echo $new_first_nameErr; ?></span>
+                <input type="text" name="new_first_name" value="<?php echo $db_first_name; ?>" placeholder="First name">
+                <span class="error"><?php echo $new_first_nameErr; ?></span>
             </td>
         </tr>
         <tr>
             <td>
-                <input type = "text" name = "new_middle_name" value = "<?php echo $db_middle_name; ?>" placeholder = "Middle name">
-                <span class = "error"><?php echo $new_middle_nameErr; ?></span>
+                <input type="text" name="new_middle_name" value="<?php echo $db_middle_name; ?>" placeholder="Middle name">
+                <span class="error"><?php echo $new_middle_nameErr; ?></span>
             </td>
         </tr>
         <tr>
             <td>
-                <input type = "text" name = "new_last_name" value = "<?php echo $db_last_name; ?>" placeholder = "Last name">
-                <span class = "error"><?php echo $new_last_nameErr; ?></span>
+                <input type="text" name="new_last_name" value="<?php echo $db_last_name; ?>" placeholder="Last name">
+                <span class="error"><?php echo $new_last_nameErr; ?></span>
             </td>
         </tr>
         <tr>
             <td>
-                <select name = "new_gender">
-                    <option name = "new_gender" value = "Male" <?php if($db_gender == "Male") { echo "selected"; } ?>>Male</option>
-                    <option name = "new_gender" value = "Female" <?php if($db_gender == "Female") { echo "selected"; } ?>>Female</option>
+                <select name="new_gender">
+                    <option name="new_gender" value="Male" <?php if($db_gender == "Male") { echo "selected"; } ?>>Male</option>
+                    <option name="new_gender" value="Female" <?php if($db_gender == "Female") { echo "selected"; } ?>>Female</option>
                 </select>
-                <span class = "error"><?php echo $new_genderErr; ?></span>
+                <span class="error"><?php echo $new_genderErr; ?></span>
             </td>
         </tr>
         <tr>
             <td>
-                <select name = "new_prefix">
-                    <option name = "new_prefix" value = "">Network Provider</option>
-                    <option name = "new_prefix" value = "0916" <?php if ($db_prefix == "0916") { echo "selected"; } ?>>0916</option>
-                    <option name = "new_prefix" value = "0917" <?php if ($db_prefix == "0917") { echo "selected"; } ?>>0917</option>
-                    <option name = "new_prefix" value = "0926" <?php if ($db_prefix == "0926") { echo "selected"; } ?>>0926</option>
-                    <option name = "new_prefix" value = "0927" <?php if ($db_prefix == "0927") { echo "selected"; } ?>>0927</option>
-                    <option name = "new_prefix" value = "0929" <?php if ($db_prefix == "0929") { echo "selected"; } ?>>0929</option>
-                    <option name = "new_prefix" value = "0949" <?php if ($db_prefix == "0949") { echo "selected"; } ?>>0949</option>
+                <select name="new_prefix">
+                    <option name="new_prefix" value="">Network Provider</option>
+                    <option name="new_prefix" value="0916" <?php if ($db_prefix == "0916") { echo "selected"; } ?>>0916</option>
+                    <option name="new_prefix" value="0917" <?php if ($db_prefix == "0917") { echo "selected"; } ?>>0917</option>
+                    <option name="new_prefix" value="0926" <?php if ($db_prefix == "0926") { echo "selected"; } ?>>0926</option>
+                    <option name="new_prefix" value="0927" <?php if ($db_prefix == "0927") { echo "selected"; } ?>>0927</option>
+                    <option name="new_prefix" value="0929" <?php if ($db_prefix == "0929") { echo "selected"; } ?>>0929</option>
+                    <option name="new_prefix" value="0949" <?php if ($db_prefix == "0949") { echo "selected"; } ?>>0949</option>
                 </select>
-                <span class = "error"><?php echo $new_prefixErr; ?></span>
-                <input type = "text" name = "new_seven_digits" value = "<?php echo $db_seven_digits; ?>" maxlength = "7" placeholder = "Other seven digits" onkeypress = 'return isNumberKey(event)'>
-                <span class = "error"><?php echo $new_seven_digitsErr; ?></span>
+                <span class="error"><?php echo $new_prefixErr; ?></span>
+                <input type="text" name="new_seven_digits" value="<?php echo $db_seven_digits; ?>" maxlength="7" placeholder="Other seven digits" onkeypress = 'return isNumberKey(event)'>
+                <span class="error"><?php echo $new_seven_digitsErr; ?></span>
             </td>
         </tr>
         <tr>
             <td>
-                <input type = "text" name = "new_email" value = "<?php echo $db_email; ?>" placeholder = "Email" size = "30">
-                <span class = "error"><?php echo $new_emailErr; ?></span>
+                <input type="text" name="new_email" value="<?php echo $db_email; ?>" placeholder="Email" size="30">
+                <span class="error"><?php echo $new_emailErr; ?></span>
             </td>
         </tr>
         <tr>
             <td>
-                <input type = "submit" name = "btn_update" value = "Update" class = "btn-primary">
+                <input type="submit" name="btn_update" value="Update" class="btn-primary">
             </td>
         </tr>
     </table>

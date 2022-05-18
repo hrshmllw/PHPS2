@@ -89,26 +89,26 @@ if(isset($_POST["btn_login"])){
 <br>
 
 <center>
-    <form method = "POST">
+    <form method="POST">
         <h2>Login</h2>
 
-        <input type = "text" name = "email" placeholder = "Email" value = "<?php echo $email; ?>">
+        <input type="text" name="email" placeholder="Email" value="<?php echo $email; ?>">
         <br>
-        <span class = "error"><?php echo $emailErr; ?></span>
+        <span class="error"><?php echo $emailErr; ?></span>
         
         <br>
 
-        <input type = "password" name = "password" placeholder = "Password" value = "">
+        <input type="password" name="password" placeholder="Password" value="">
         <br>
-        <span class = "error"><?php echo $passwordErr; ?></span>
-        <br>
-
-        <input type = "submit" name = "btn_login" class = "btn-primary" value = "Login">
-
-        <br>
-        <span class = "error"><?php echo $notify; ?></span>
+        <span class="error"><?php echo $passwordErr; ?></span>
         <br>
 
-        <a href = "?forgot=<?php echo md5(rand(1,9)); ?>">Forgot password?</a>
+        <input type="submit" name="btn_login" class="btn-primary" value="Login">
+
+        <br>
+        <span class="error"><?php echo $notify; ?></span>
+        <br>
+
+        <a href="?forgot=<?php echo md5(rand(1,9)); ?>">Forgot password?</a>
     </form>
 </center>

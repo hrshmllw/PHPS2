@@ -14,9 +14,9 @@ if(isset($_SESSION["email"])){
 include("nav.php");
 ?>
 
-<script type = "text/javascript" src = "js/jQuery.js"></script>
+<script type="text/javascript" src="js/jQuery.js"></script>
 
-<script type = "application/javascript">
+<script type="application/javascript">
     setInterval(function(){
         $('#retriever').load('retriever.php');
     }, 1000);
@@ -32,7 +32,7 @@ if(empty($_GET["getDelete"])){
 if(empty($_GET["getUpdate"])){
 ?>
 
-<div id = "retriever">
+<div id="retriever">
 <?php
 include("retriever.php");
 ?>
