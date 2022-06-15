@@ -1,4 +1,5 @@
 <?php
+include("connections.php");
 include("nav.php");
 
 $first_name = $middle_name = $last_name = $gender = $prefix = $seven_digits = $email = "";
@@ -77,11 +78,48 @@ if (isset($_POST["button_register"])){
             return $shuffled;
         }
         $password = random_password(8);
-        include("connections.php");
-        mysqli_query($connections, "INSERT INTO table_user(first_name, middle_name, last_name, gender, prefix, seven_digits, email, password, account_type)
+
+        require 'PHPMailer/PHPMailerAutoload.php';
+
+        $mail = new PHPMailer;
+
+        $mail->isSMTP();
+
+        $mail->Host = 'smtp.gmail.com';
+
+        $mail->SMTPAuth = true;
+
+
+        $mail->Username = 'phps2.appdev.sender@gmail.com';
+        $mail->Password = 'leftcrgyvhbjotwb';
+
+        $mail->SMTPSecure = 'tsl';
+
+        $mail->Port = 587;
+
+        $mail->From = 'Test';
+
+        $mail->FromName = 'Sender';
+
+        $mail->addAddress($email);
+
+        $mail->isHTML(true);
+        
+        $message = "Password is: <font color='red'><b>$password</b></font>";
+
+        $mail->Subject = 'Default password';
+
+        $mail->Body = $message;
+
+        if(!$mail->send()){
+            echo 'Message could not be sent.';
+            echo 'Mailer error.' . $mail->ErrorInfo;
+        } else{
+            mysqli_query($connections, "INSERT INTO table_user(first_name, middle_name, last_name, gender, prefix, seven_digits, email, password, account_type)
         VALUES('$first_name', '$middle_name', '$last_name', '$gender', '$prefix', '$seven_digits', '$email', '$password', '2')");
 
         echo "<script>window.location.href='success.php';</script>";
+        }
     }
 }
 
